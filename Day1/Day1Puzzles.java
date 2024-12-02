@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Day1Puzzle{
+public class Day1Puzzles{
     public static void main(String args[])throws FileNotFoundException{
 
         File file = new File("puzzle_input.txt");
@@ -34,12 +34,12 @@ public class Day1Puzzle{
             else map.put(list2.get(i), 1);
             totalDistance += Math.abs(list2.get(i) - list1.get(i));
         }
-        System.out.println("Total distance is "+ totalDistance);  // solution for first problem
+        System.out.println("Total distance is "+ totalDistance);  // solution for first puzzle
         int similarityScore =0;
         for(int i=0;i<n;i++){
             int score = map.containsKey(list1.get(i)) ? map.get(list1.get(i)) : 0;
             similarityScore += list1.get(i) * score;
         }
-        System.out.println("Similarity score is "+ similarityScore);  // solution for second problem
+        System.out.println("Similarity score is "+ similarityScore);  // solution for second puzzle
     }
 }
